@@ -40,6 +40,12 @@ inputs:
   pcb_drc_file:
     description: 'Output filename for DRC report'
     default: 'drc.rpt'
+  pcb_cpl:
+    description: 'Whether to produce CPL in export job.'
+    default: false
+  pcb_cpl_file:
+    description: 'Output filename for CPL.'
+    default: 'cpl.csv'
   pcb_gerbers:
     description: 'Whether to generate Gerbers from PCB'
     default: false

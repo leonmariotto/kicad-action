@@ -47,6 +47,17 @@ then
   drc_violation=$?
 fi
 
+# Export CPL if requested
+if [[ -n $INPUT_KICAD_PCB ]] && [[ $INPUT_PCB_CPL = "true" ]]
+then
+  kicad-cli pcb export pos \
+    --format csv \
+    --units mm \
+    --side both \
+    --output "`dirname $INPUT_KICAD_PCB`/$INPUT_PCB_CPL_FILE" \
+    "$INPUT_KICAD_PCB"
+fi
+
 # Export Gerbers if requested
 if [[ -n $INPUT_KICAD_PCB ]] && [[ $INPUT_PCB_GERBERS = "true" ]]
 then
