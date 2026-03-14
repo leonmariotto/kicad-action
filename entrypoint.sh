@@ -55,7 +55,6 @@ then
     --units mm \
     --side both \
 	--smd-only \
-	--exclude-fp-th \
 	--exclude-dnp \
     --output "`dirname $INPUT_KICAD_PCB`/$INPUT_PCB_CPL_FILE" \
     "$INPUT_KICAD_PCB"
